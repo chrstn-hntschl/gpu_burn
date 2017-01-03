@@ -9,4 +9,5 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 WORKDIR /root
 RUN wget http://wili.cc/blog/entries/gpu-burn/gpu_burn-0.7.tar.gz && tar xzf gpu_burn-0.7.tar.gz && make
 
-CMD [ '/root/gpu_burn' ]
+ENTRYPOINT [ '/root/gpu_burn' ]
+CMD [ '10' ]   # burn for 10 secs
